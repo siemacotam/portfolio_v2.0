@@ -36,6 +36,98 @@
   }
 }
 
+@-webkit-keyframes photo1 {
+  0% {
+    -webkit-transform: translate(-50%, -50%) scale(0);
+            transform: translate(-50%, -50%) scale(0);
+  }
+  33% {
+    -webkit-transform: translate(-50%, -50%) scale(1) rotate(720deg);
+            transform: translate(-50%, -50%) scale(1) rotate(720deg);
+  }
+  65% {
+    -webkit-transform: translate(-50%, -50%) scale(1) rotate(720deg);
+            transform: translate(-50%, -50%) scale(1) rotate(720deg);
+  }
+  100% {
+    -webkit-transform: translate(150%, -50%) scale(1) rotate(720deg);
+            transform: translate(150%, -50%) scale(1) rotate(720deg);
+  }
+}
+
+@keyframes photo1 {
+  0% {
+    -webkit-transform: translate(-50%, -50%) scale(0);
+            transform: translate(-50%, -50%) scale(0);
+  }
+  33% {
+    -webkit-transform: translate(-50%, -50%) scale(1) rotate(720deg);
+            transform: translate(-50%, -50%) scale(1) rotate(720deg);
+  }
+  65% {
+    -webkit-transform: translate(-50%, -50%) scale(1) rotate(720deg);
+            transform: translate(-50%, -50%) scale(1) rotate(720deg);
+  }
+  100% {
+    -webkit-transform: translate(150%, -50%) scale(1) rotate(720deg);
+            transform: translate(150%, -50%) scale(1) rotate(720deg);
+  }
+}
+
+@-webkit-keyframes photo2 {
+  0% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
+  65.98% {
+    -webkit-transform: translate(-50%, -50%) scale(0) rotate(720deg);
+            transform: translate(-50%, -50%) scale(0) rotate(720deg);
+  }
+  65.99% {
+    -webkit-transform: translate(-250%, -50%) scale(0) rotate(0deg);
+            transform: translate(-250%, -50%) scale(0) rotate(0deg);
+  }
+  66% {
+    -webkit-transform: translate(-250%, -50%) scale(1);
+            transform: translate(-250%, -50%) scale(1);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes photo2 {
+  0% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
+  65.98% {
+    -webkit-transform: translate(-50%, -50%) scale(0) rotate(720deg);
+            transform: translate(-50%, -50%) scale(0) rotate(720deg);
+  }
+  65.99% {
+    -webkit-transform: translate(-250%, -50%) scale(0) rotate(0deg);
+            transform: translate(-250%, -50%) scale(0) rotate(0deg);
+  }
+  66% {
+    -webkit-transform: translate(-250%, -50%) scale(1);
+            transform: translate(-250%, -50%) scale(1);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
+}
+
 body .wrap {
   height: 500vh;
   max-width: 1600px;
@@ -154,5 +246,75 @@ body .wrap header .slogan div .cursor {
 
 body .wrap header .slogan div .cursor.active {
   opacity: 1;
+}
+
+.about {
+  height: 100vh;
+}
+
+.about h2 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  width: 100%;
+  text-align: center;
+  height: 10vh;
+  background-color: #0000FF;
+}
+
+.about div {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  height: 90vh;
+}
+
+.about div div {
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  height: 50%;
+}
+
+.about div .info, .about div .info2 {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: justify;
+}
+
+.about div .foto, .about div .foto2 {
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+  margin: 0 5px;
+}
+
+.about div .foto img, .about div .foto2 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.about div .foto img {
+  -webkit-animation: photo1 10s linear infinite;
+          animation: photo1 10s linear infinite;
+}
+
+.about div .foto2 img {
+  -webkit-animation: photo2 10s linear infinite;
+          animation: photo2 10s linear infinite;
 }
 /*# sourceMappingURL=style.css.map */
