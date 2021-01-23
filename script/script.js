@@ -4,9 +4,10 @@ document.querySelector('.burger').addEventListener('click', function(){
     document.querySelector(".menu").classList.toggle('active')
 })
 
-document.querySelector('.menu ul li a').addEventListener('click', function(){
+const naviButtons = document.querySelectorAll('.menu ul li a')
+naviButtons.forEach(function(naviButton){naviButton.addEventListener('click', function(){
     document.querySelector(".menu").classList.toggle('active')
-})
+})})
 
 // typing slogan
 
@@ -70,9 +71,45 @@ setInterval(photoChange, 10000)
 const photoChange2 = () => {
     photo2.src = photo2Options[activeElement2]
     activeElement2++
-    if(activeElement2 == photo2Options.length){
+    if(activeElement2 === photo2Options.length){
         activeElement2 = 0
     }
     setInterval(photoChange2, 10000)
 }
 setTimeout(photoChange2, 6600)
+
+// wysuwanie się skillsów
+
+$(document).on('scroll', function(){
+    const windowHeight =  $(window).height()
+    const scrollValue = $(this).scrollTop();
+
+    const $d1 = $('.d1')
+    const d1FromTop = $d1.offset().top
+    const d1Height = $d1.outerHeight()
+
+    const $d2 = $('.d2')
+    const d2FromTop = $d2.offset().top
+    const d2Height = $d2.outerHeight()
+
+    const $d3 = $('.d3')
+    const d3FromTop = $d3.offset().top
+    const d3Height = $d3.outerHeight()
+
+    if(scrollValue > d1FromTop + d1Height - windowHeight){
+        $d1.addClass('active')
+    }
+    if(scrollValue > d2FromTop + d2Height - windowHeight){
+        $d2.addClass('active')
+    }
+    if(scrollValue > d3FromTop + d3Height - windowHeight){
+        $d3.addClass('active')
+    }
+
+    if (scrollValue < 100) {
+        $('.wrapper div div').removeClass('active');
+      }
+    
+})
+
+// reset wysuwania
