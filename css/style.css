@@ -129,9 +129,10 @@
 }
 
 body .wrap {
-  height: 500vh;
+  height: 605vh;
   max-width: 1600px;
   margin: 0px auto;
+  overflow: hidden;
 }
 
 body .wrap header {
