@@ -259,6 +259,11 @@ body .wrap header .slogan div .cursor.active {
   text-align: center;
   height: 10vh;
   background-color: #0000FF;
+  border: 1px solid #0000FF;
+  border-radius: 5px;
+  width: 90%;
+  margin: 10px auto;
+  line-height: 10vh;
 }
 
 .about div {
@@ -332,6 +337,10 @@ body .wrap header .slogan div .cursor.active {
   color: white;
   display: block;
   text-align: center;
+  text-transform: uppercase;
+  width: 90%;
+  line-height: 10vh;
+  margin: 0px auto 10px auto;
 }
 
 .does div {
@@ -356,7 +365,64 @@ body .wrap header .slogan div .cursor.active {
 
 .pasion {
   height: 100vh;
-  background-color: yellow;
+  position: relative;
+  overflow: hidden;
+}
+
+.pasion h2 {
+  height: 10vh;
+  opacity: 1;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 10px auto;
+}
+
+.pasion img {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.pasion h3 {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.pasion div {
+  position: absolute;
+  bottom: 5%;
+  left: 30%;
+  right: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.pasion div span {
+  display: block;
+  height: 10px;
+  width: 10px;
+  background-color: blue;
+  border-radius: 50%;
+  margin: 0px 10px;
+  -webkit-box-shadow: 0 0 0 5px white;
+          box-shadow: 0 0 0 5px white;
+}
+
+.pasion div span.active {
+  -webkit-box-shadow: 0 0 0 5px white, 0 0 3px 10px red;
+          box-shadow: 0 0 0 5px white, 0 0 3px 10px red;
 }
 
 .opinions {
@@ -374,6 +440,13 @@ body .wrap header .slogan div .cursor.active {
   text-align: center;
   height: 10vh;
   font-size: 2em;
+  text-transform: uppercase;
+  background-color: #778899;
+  border: 1px solid #778899;
+  border-radius: 5px;
+  width: 90%;
+  margin: 10px auto;
+  line-height: 10vh;
 }
 
 .s2skills .wrapper {
@@ -455,7 +528,9 @@ body .wrap header .slogan div .cursor.active {
 }
 
 footer {
-  height: 10vh;
-  background-color: green;
+  height: 5vh;
+  background-color: #C0C0C0;
+  text-align: center;
+  padding-top: 5px;
 }
 /*# sourceMappingURL=style.css.map */

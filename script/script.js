@@ -112,4 +112,42 @@ $(document).on('scroll', function(){
     
 })
 
-// reset wysuwania
+// slider pasje
+
+const sliderParts = [{
+    img: 'img/snowboard.jpg',
+    text: 'snowboard'
+},{
+    img: 'img/parachute.jpg',
+    text: 'skydiving'
+},{
+    img: 'img/reczna5.png',
+    text: 'handball'
+}]
+
+const image = document.querySelector('.pasion img')
+const h3 = document.querySelector('.pasion h3')
+const dots = [...document.querySelectorAll('.pasion div span')]
+
+const time = 3000
+let active = 0
+
+const changeDot = () => {
+    const activeDot = dots.findIndex(dot => dot.classList.contains('active'))
+    dots[activeDot].classList.remove('active')
+    dots[active].classList.add('active')
+}
+
+const changeSlide = () => {
+    active++
+    if(active == sliderParts.length){
+        active = 0
+    }
+    image.src = sliderParts[active].img
+    h3.textContent = sliderParts[active].text
+    changeDot()
+}
+
+let indexInterval = setInterval(changeSlide, time)
+
+
